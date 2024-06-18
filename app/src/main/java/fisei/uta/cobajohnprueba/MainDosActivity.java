@@ -18,6 +18,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class MainDosActivity extends AppCompatActivity {
 
     public EditText textViewnombre,textViewapellido;
+    private int code = 1 ;
     ActivityResultLauncher<Intent>resultLauncher = registerForActivityResult(
             new ActivityResultContracts.StartActivityForResult(),
             new ActivityResultCallback<ActivityResult>() {
@@ -45,13 +46,14 @@ public class MainDosActivity extends AppCompatActivity {
         textViewapellido= findViewById(R.id.editTextLastName);
 
     }
-    public void clickNextPage3(View view){
+    public void clickNextPage(View view){
         String nombreEnviar = textViewnombre.getText().toString();
         String apellidoEnviar = textViewapellido.getText().toString();
-        Intent intent = new Intent(this, MainTerceroActivity.class);
+        Intent intent = new Intent(this, ManuActivity.class);
         intent.putExtra("nombreEnviar",nombreEnviar);
         intent.putExtra("apellidoEnviar",apellidoEnviar);
-        //resultLauncher.launch(intent);
         startActivity(intent);
+        //resultLauncher.launch(intent);
+        //startActivityForResult(intent,code);
     }
 }

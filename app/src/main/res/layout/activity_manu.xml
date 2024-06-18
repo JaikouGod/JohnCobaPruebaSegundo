@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainDosActivity">
+    tools:context=".MainTerceroActivity">
 
     <EditText
         android:id="@+id/editTextName"
@@ -16,7 +16,8 @@
         android:ems="10"
         android:hint="@string/textview_nombre"
         android:inputType="text"
-        android:minHeight="48dp" />
+        android:minHeight="48dp"
+        android:focusable="true"/>
 
     <EditText
         android:id="@+id/editTextLastName"
@@ -26,19 +27,18 @@
         android:ems="10"
         android:hint="@string/textview_apellido"
         android:inputType="text"
-        android:minHeight="48dp" />
+        android:minHeight="48dp"
+        android:focusable="false"/>
 
     <EditText
         android:id="@+id/editTextDiviendo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:editable="false"
         android:ems="10"
         android:hint="@string/textview_dividendo"
         android:inputType="text"
-        android:minHeight="48dp"
-        android:focusable="false"/>
+        android:minHeight="48dp" />
 
     <EditText
         android:id="@+id/editTextDivisor"
@@ -48,32 +48,23 @@
         android:ems="10"
         android:hint="@string/textview_divisor"
         android:inputType="text"
-        android:minHeight="48dp"
-        android:focusable="false"/>
+        android:minHeight="48dp" />
 
     <EditText
-        android:id="@+id/editTextNumero"
+        android:id="@+id/editTextNumeroEnviar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:ems="10"
         android:hint="@string/textviewNumber"
         android:inputType="text"
-        android:minHeight="48dp"
-        android:focusable="false"/>
-
-    <Button
-        android:id="@+id/buttonSigueinte"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="clickNextPage"
-        android:text="@string/buttonSiguiente" />
+        android:minHeight="48dp" />
 
     <Button
         android:id="@+id/buttonCerrar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClick="onclickReturnPage"
         android:text="@string/buttonCerrar" />
-
 
 </LinearLayout>

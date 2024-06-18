@@ -13,6 +13,9 @@
         android:theme="@style/Theme.CobaJohnPrueba"
         tools:targetApi="31">
         <activity
+            android:name=".ManuActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainTerceroActivity"
             android:exported="false" />
         <activity
