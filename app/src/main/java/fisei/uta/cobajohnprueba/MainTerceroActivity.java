@@ -1,6 +1,7 @@
 package fisei.uta.cobajohnprueba;
 
 import android.os.Bundle;
+import android.widget.EditText;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,6 +11,8 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainTerceroActivity extends AppCompatActivity {
 
+    public EditText textViewnombre,textViewapellido;
+    public EditText textViewDividendo , textViewDivisor,textViewNumero;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,5 +23,14 @@ public class MainTerceroActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        textViewDividendo = findViewById(R.id.editTextDiviendo);
+        textViewDivisor = findViewById(R.id.editTextDivisor);
+        textViewNumero = findViewById(R.id.editTextNumeroEnviar);
+        Bundle bundlexd = getIntent().getExtras();
+       String nombre= bundlexd.getString("nombreEnviar");
+       String apellido = bundlexd.getString("apellidoEnviar");
+       textViewnombre.setText(nombre);
+        textViewapellido.setText(apellido);
+
     }
 }
