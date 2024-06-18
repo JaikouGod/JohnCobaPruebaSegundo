@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.EditText;
 
 import androidx.activity.EdgeToEdge;
@@ -25,22 +26,28 @@ public class ManuActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-
+        textViewnombre = findViewById(R.id.editTextName);
+        textViewapellido = findViewById(R.id.editTextLastName);
         textViewDividendo = findViewById(R.id.editTextDiviendo);
         textViewDivisor = findViewById(R.id.editTextDivisor);
         textViewNumero = findViewById(R.id.editTextNumeroEnviar);
         Bundle bundle = getIntent().getExtras();
         String nombre= bundle.getString("nombreEnviar");
         String apellido = bundle.getString("apellidoEnviar");
-        //textViewnombre.setText(nombre.toString());
-       // textViewapellido.setText(apellido.toString());
+        textViewnombre.setText(nombre);
+       textViewapellido.setText(apellido);
 
     }
-    public void onclickRetornar(){
+    public void onclickRetornar(View view){
         String dividendo = textViewDividendo.getText().toString();
+        String divisor = textViewDivisor.getText().toString();
+        String numero = textViewNumero.getText().toString();
         Intent intent = new Intent();
         intent.setData(Uri.parse(dividendo));
+        intent.setData(Uri.parse(divisor));
+        intent.setData(Uri.parse(numero));
         setResult(Activity.RESULT_OK,intent);
         finish();
     }
+
 }

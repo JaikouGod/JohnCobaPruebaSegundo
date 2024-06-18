@@ -17,7 +17,7 @@
         android:hint="@string/textview_nombre"
         android:inputType="text"
         android:minHeight="48dp"
-        android:focusable="true"/>
+        android:focusable="false"/>
 
     <EditText
         android:id="@+id/editTextLastName"
@@ -64,7 +64,7 @@
         android:id="@+id/buttonCerrar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="onclickReturnPage"
+        android:onClick="onclickRetornar"
         android:text="@string/buttonCerrar" />
 
 </LinearLayout>

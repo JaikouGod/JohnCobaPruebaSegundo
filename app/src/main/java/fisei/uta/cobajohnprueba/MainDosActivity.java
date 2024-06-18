@@ -1,6 +1,8 @@
 package fisei.uta.cobajohnprueba;
 
+import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -18,6 +20,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class MainDosActivity extends AppCompatActivity {
 
     public EditText textViewnombre,textViewapellido;
+    public EditText textViewDividendo , textViewDivisor, textViewNumero;
     private int code = 1 ;
     ActivityResultLauncher<Intent>resultLauncher = registerForActivityResult(
             new ActivityResultContracts.StartActivityForResult(),
@@ -26,7 +29,11 @@ public class MainDosActivity extends AppCompatActivity {
                 public void onActivityResult(ActivityResult o) {
                     if (o.getResultCode()==MainDosActivity.RESULT_OK){
                         //Procesar los datos
-
+                        Bundle  bundleExtras  = getIntent().getExtras();
+                        String numero = bundleExtras.getString("numero");
+                        textViewDividendo.setText(o.getData().getDataString());
+                        textViewDivisor.setText(o.getData().getDataString());
+                        textViewNumero.setText(o.getData().getDataString());
                     }
                 }
             }
@@ -44,6 +51,9 @@ public class MainDosActivity extends AppCompatActivity {
         });
         textViewnombre= findViewById(R.id.editTextName);
         textViewapellido= findViewById(R.id.editTextLastName);
+        textViewDividendo = findViewById(R.id.editTextDiviendo);
+        textViewDivisor = findViewById(R.id.editTextDivisor);
+        textViewNumero = findViewById(R.id.editTextNumero);
 
     }
     public void clickNextPage(View view){
@@ -52,8 +62,22 @@ public class MainDosActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ManuActivity.class);
         intent.putExtra("nombreEnviar",nombreEnviar);
         intent.putExtra("apellidoEnviar",apellidoEnviar);
-        startActivity(intent);
-        //resultLauncher.launch(intent);
+        //startActivity(intent);
+        resultLauncher.launch(intent);
         //startActivityForResult(intent,code);
+    }
+    public void clicCerrar(View view){
+        String dividendo = textViewDividendo.getText().toString();
+        String divisor = textViewDivisor.getText().toString();
+        String numero = textViewNumero.getText().toString();
+        Intent intent = new Intent();
+        intent.setData(Uri.parse(dividendo));
+        intent.setData(Uri.parse(divisor));
+        intent.setData(Uri.parse(numero));
+        setResult(Activity.RESULT_OK,intent);
+        finish();
+    }
+    public void cerrar(View view){
+
     }
 }
