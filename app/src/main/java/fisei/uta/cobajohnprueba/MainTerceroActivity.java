@@ -1,6 +1,8 @@
 package fisei.uta.cobajohnprueba;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.EditText;
 
 import androidx.activity.EdgeToEdge;
@@ -30,7 +32,13 @@ public class MainTerceroActivity extends AppCompatActivity {
        String nombre= bundlexd.getString("nombreEnviar");
        String apellido = bundlexd.getString("apellidoEnviar");
        textViewnombre.setText(nombre);
-        textViewapellido.setText(apellido);
+       textViewapellido.setText(apellido);
+
+    }
+    public void onclickReturnPage(View view){
+        //Intent intent = new Intent(this, MainDosActivity.class);
+
+        finish();
 
     }
 }

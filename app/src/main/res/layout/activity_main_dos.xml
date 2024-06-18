@@ -37,7 +37,8 @@
         android:ems="10"
         android:hint="@string/textview_dividendo"
         android:inputType="text"
-        android:minHeight="48dp" />
+        android:minHeight="48dp"
+        android:focusable="false"/>
 
     <EditText
         android:id="@+id/editTextDivisor"
@@ -47,7 +48,8 @@
         android:ems="10"
         android:hint="@string/textview_divisor"
         android:inputType="text"
-        android:minHeight="48dp" />
+        android:minHeight="48dp"
+        android:focusable="false"/>
 
     <EditText
         android:id="@+id/editTextNumero"
@@ -57,7 +59,8 @@
         android:ems="10"
         android:hint="@string/textviewNumber"
         android:inputType="text"
-        android:minHeight="48dp" />
+        android:minHeight="48dp"
+        android:focusable="false"/>
 
     <Button
         android:id="@+id/buttonSigueinte"

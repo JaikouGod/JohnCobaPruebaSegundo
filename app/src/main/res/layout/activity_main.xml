@@ -16,7 +16,10 @@
         android:ems="10"
         android:hint="@string/textview_nombre"
         android:inputType="text"
-        android:minHeight="48dp" />
+        android:minHeight="48dp"
+        android:clickable="false"
+        android:focusable="false"
+        />
 
     <EditText
         android:id="@+id/editTextLastName"
@@ -26,7 +29,8 @@
         android:ems="10"
         android:hint="@string/textview_apellido"
         android:inputType="text"
-        android:minHeight="48dp" />
+        android:minHeight="48dp"
+        android:focusable="false"/>
 
     <EditText
         android:id="@+id/editTextDiviendo"
@@ -36,7 +40,8 @@
         android:ems="10"
         android:hint="@string/textview_dividendo"
         android:inputType="text"
-        android:minHeight="48dp" />
+        android:minHeight="48dp"
+        android:focusable="false"/>
 
     <EditText
         android:id="@+id/editTextDivisor"
@@ -46,7 +51,8 @@
         android:ems="10"
         android:hint="@string/textview_divisor"
         android:inputType="text"
-        android:minHeight="48dp" />
+        android:minHeight="48dp"
+        android:focusable="false"/>
 
     <EditText
         android:id="@+id/editTextParteEntera"
@@ -56,7 +62,8 @@
         android:ems="10"
         android:hint="@string/textview_parteentera"
         android:inputType="text"
-        android:minHeight="48dp" />
+        android:minHeight="48dp"
+        android:focusable="false"/>
 
     <EditText
         android:id="@+id/editTextResiduo"
@@ -66,7 +73,8 @@
         android:ems="10"
         android:hint="@string/textview_residuo"
         android:inputType="text"
-        android:minHeight="48dp" />
+        android:minHeight="48dp"
+        android:focusable="false"/>
 
     <EditText
         android:id="@+id/editTextNInvertido"
@@ -76,7 +84,8 @@
         android:ems="10"
         android:hint="@string/textview_numeroInvertido"
         android:inputType="text"
-        android:minHeight="48dp" />
+        android:minHeight="48dp"
+        android:focusable="false"/>
 
     <Button
         android:id="@+id/buttonSigueinte"

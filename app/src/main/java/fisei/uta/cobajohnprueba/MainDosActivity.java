@@ -6,6 +6,10 @@ import android.view.View;
 import android.widget.EditText;
 
 import androidx.activity.EdgeToEdge;
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -14,6 +18,19 @@ import androidx.core.view.WindowInsetsCompat;
 public class MainDosActivity extends AppCompatActivity {
 
     public EditText textViewnombre,textViewapellido;
+    ActivityResultLauncher<Intent>resultLauncher = registerForActivityResult(
+            new ActivityResultContracts.StartActivityForResult(),
+            new ActivityResultCallback<ActivityResult>() {
+                @Override
+                public void onActivityResult(ActivityResult o) {
+                    if (o.getResultCode()==MainDosActivity.RESULT_OK){
+                        //Procesar los datos
+
+                    }
+                }
+            }
+    );
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +51,7 @@ public class MainDosActivity extends AppCompatActivity {
         Intent intent = new Intent(this, MainTerceroActivity.class);
         intent.putExtra("nombreEnviar",nombreEnviar);
         intent.putExtra("apellidoEnviar",apellidoEnviar);
+        //resultLauncher.launch(intent);
         startActivity(intent);
     }
 }
