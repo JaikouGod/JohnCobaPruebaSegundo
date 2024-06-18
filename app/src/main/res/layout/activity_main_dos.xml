@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity" >
+    tools:context=".MainDosActivity">
 
     <EditText
         android:id="@+id/editTextName"
@@ -49,32 +49,12 @@
         android:minHeight="48dp" />
 
     <EditText
-        android:id="@+id/editTextParteEntera"
+        android:id="@+id/editTextNumero"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:ems="10"
-        android:hint="@string/textview_parteentera"
-        android:inputType="text"
-        android:minHeight="48dp" />
-
-    <EditText
-        android:id="@+id/editTextResiduo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:ems="10"
-        android:hint="@string/textview_residuo"
-        android:inputType="text"
-        android:minHeight="48dp" />
-
-    <EditText
-        android:id="@+id/editTextNInvertido"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:ems="10"
-        android:hint="@string/textview_numeroInvertido"
+        android:hint="@string/textviewNumber"
         android:inputType="text"
         android:minHeight="48dp" />
 
@@ -85,8 +65,10 @@
         android:text="@string/buttonSiguiente" />
 
     <Button
-        android:id="@+id/buttonShow"
+        android:id="@+id/buttonCerrar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/buttonResultados" />
+        android:text="@string/buttonCerrar" />
+
+
 </LinearLayout>

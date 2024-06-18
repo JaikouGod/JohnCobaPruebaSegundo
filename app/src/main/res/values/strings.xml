@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">CobaJohnPrueba</string>
+    <string name="textview_nombre">Nombre:</string>
+    <string name="textview_apellido">Apellido:</string>
+    <string name="textview_dividendo">Dividendo:</string>
+    <string name="textview_divisor">Divisor:</string>
+    <string name="textview_parteentera">Parte Entera:</string>
+    <string name="textview_residuo">Residuo:</string>
+    <string name="textview_numeroInvertido">Num.Invertido:</string>
+    <string name="buttonSiguiente">Siguiente</string>
+    <string name="buttonCerrar">Cerrar</string>
+    <string name="buttonResultados">Mostrar resultados</string>
+    <string name="textviewNumber">Numero: </string>
 </resources>
